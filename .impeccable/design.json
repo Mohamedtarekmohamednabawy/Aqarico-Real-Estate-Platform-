@@ -1,0 +1,215 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-05-12T00:00:00+02:00",
+  "title": "Design System: Aqarico",
+  "extensions": {
+    "colorMeta": {
+      "signal-orange": {
+        "role": "primary",
+        "displayName": "Signal Orange",
+        "canonical": "#f97316",
+        "tonalRamp": ["oklch(22% 0.07 55)", "oklch(32% 0.1 55)", "oklch(44% 0.14 55)", "oklch(58% 0.18 55)", "oklch(68% 0.19 55)", "oklch(78% 0.14 55)", "oklch(88% 0.08 55)", "oklch(96% 0.03 55)"]
+      },
+      "sunlit-orange": {
+        "role": "primary",
+        "displayName": "Sunlit Orange",
+        "canonical": "#fb923c",
+        "tonalRamp": ["oklch(22% 0.06 57)", "oklch(32% 0.09 57)", "oklch(44% 0.13 57)", "oklch(58% 0.17 57)", "oklch(70% 0.17 57)", "oklch(80% 0.12 57)", "oklch(90% 0.07 57)", "oklch(96% 0.03 57)"]
+      },
+      "ember-orange": {
+        "role": "primary",
+        "displayName": "Ember Orange",
+        "canonical": "#ea580c",
+        "tonalRamp": ["oklch(20% 0.06 48)", "oklch(30% 0.09 48)", "oklch(42% 0.13 48)", "oklch(54% 0.17 48)", "oklch(65% 0.17 48)", "oklch(76% 0.12 48)", "oklch(88% 0.07 48)", "oklch(95% 0.03 48)"]
+      },
+      "paper-sand": {
+        "role": "neutral",
+        "displayName": "Paper Sand",
+        "canonical": "#fff7ed",
+        "tonalRamp": ["oklch(18% 0.015 60)", "oklch(30% 0.018 60)", "oklch(44% 0.02 60)", "oklch(58% 0.022 60)", "oklch(72% 0.024 60)", "oklch(84% 0.025 60)", "oklch(92% 0.025 60)", "oklch(98% 0.018 60)"]
+      },
+      "grounded-cocoa": {
+        "role": "neutral",
+        "displayName": "Grounded Cocoa",
+        "canonical": "#431407",
+        "tonalRamp": ["oklch(14% 0.04 45)", "oklch(22% 0.05 45)", "oklch(32% 0.055 45)", "oklch(44% 0.055 45)", "oklch(58% 0.045 45)", "oklch(72% 0.035 45)", "oklch(86% 0.025 45)", "oklch(96% 0.015 45)"]
+      },
+      "verified-green": {
+        "role": "secondary",
+        "displayName": "Verified Green",
+        "canonical": "#10b981",
+        "tonalRamp": ["oklch(18% 0.05 160)", "oklch(30% 0.08 160)", "oklch(42% 0.11 160)", "oklch(56% 0.14 160)", "oklch(68% 0.14 160)", "oklch(80% 0.1 160)", "oklch(90% 0.06 160)", "oklch(96% 0.025 160)"]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "Route heroes and major page titles only."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Section titles, dashboards, and modals."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "Cards, listing names, agent names, and panel headers."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Descriptions and readable content."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Form labels, metadata, filters, and compact controls."
+      }
+    },
+    "shadows": [
+      {
+        "name": "subtle-lift",
+        "value": "0 1px 2px rgba(0,0,0,0.03)",
+        "purpose": "Tiny resting elevation in light mode."
+      },
+      {
+        "name": "panel-lift",
+        "value": "0 4px 6px rgba(0,0,0,0.08)",
+        "purpose": "Cards, search panels, and ordinary dropdowns."
+      },
+      {
+        "name": "high-lift",
+        "value": "0 10px 15px rgba(0,0,0,0.12)",
+        "purpose": "Overlays, important dropdowns, and hover states."
+      },
+      {
+        "name": "floating-bar-lift",
+        "value": "0 20px 50px -10px rgba(0,0,0,0.35)",
+        "purpose": "Persistent bottom UI such as comparison."
+      }
+    ],
+    "motion": [
+      {
+        "name": "state-transition",
+        "value": "200ms ease-out",
+        "purpose": "Default hover and focus response."
+      },
+      {
+        "name": "panel-transition",
+        "value": "300ms ease-out",
+        "purpose": "Cards, menus, and route-adjacent UI."
+      },
+      {
+        "name": "spring-floating-bar",
+        "value": "damping: 22, stiffness: 280",
+        "purpose": "Comparison bar entrance and exit."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "sm",
+        "value": "640px"
+      },
+      {
+        "name": "md",
+        "value": "768px"
+      },
+      {
+        "name": "lg",
+        "value": "1024px"
+      },
+      {
+        "name": "xl",
+        "value": "1280px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "The default action button for applying filters, opening details, and confirming tasks.",
+      "html": "<button class=\"ds-btn-primary\">Apply Filters</button>",
+      "css": ".ds-btn-primary { background: #f97316; color: #fff3e0; border: 0; border-radius: 0.5rem; padding: 0.625rem 1rem; font: 600 0.875rem/1.2 Outfit, sans-serif; cursor: pointer; transition: opacity 200ms ease-out, transform 200ms ease-out; } .ds-btn-primary:hover { opacity: 0.9; } .ds-btn-primary:active { transform: scale(0.98); } .ds-btn-primary:focus-visible { outline: 3px solid rgba(249,115,22,0.35); outline-offset: 2px; }"
+    },
+    {
+      "name": "Secondary Button",
+      "kind": "button",
+      "refersTo": "button-secondary",
+      "description": "A quiet action for clearing filters or secondary account actions.",
+      "html": "<button class=\"ds-btn-secondary\">Clear</button>",
+      "css": ".ds-btn-secondary { background: #fff7ed; color: #431407; border: 2px solid #fed7aa; border-radius: 0.5rem; padding: 0.625rem 1.5rem; font: 600 0.875rem/1.2 Outfit, sans-serif; cursor: pointer; transition: opacity 200ms ease-out, border-color 200ms ease-out; } .ds-btn-secondary:hover { opacity: 0.8; border-color: #f97316; } .ds-btn-secondary:focus-visible { outline: 3px solid rgba(249,115,22,0.28); outline-offset: 2px; }"
+    },
+    {
+      "name": "Text Input",
+      "kind": "input",
+      "refersTo": "input-default",
+      "description": "Standard form and search input with warm surface, clear border, and orange focus.",
+      "html": "<label class=\"ds-field\"><span class=\"ds-field-label\">Search</span><input class=\"ds-input\" placeholder=\"Search by property title or location...\" /></label>",
+      "css": ".ds-field { display: grid; gap: 0.5rem; font-family: Outfit, sans-serif; } .ds-field-label { color: #431407; font-size: 0.875rem; font-weight: 500; } .ds-input { background: #fff7ed; color: #431407; border: 2px solid #fed7aa; border-radius: 0.5rem; padding: 0.75rem 1rem; font: 400 0.875rem/1.4 Outfit, sans-serif; transition: border-color 200ms ease-out, box-shadow 200ms ease-out; } .ds-input:focus { outline: 0; border-color: #f97316; box-shadow: 0 0 0 3px rgba(249,115,22,0.18); }"
+    },
+    {
+      "name": "Property Card",
+      "kind": "card",
+      "refersTo": "card-surface",
+      "description": "The primary listing preview surface, combining image, price, metadata, chips, and action.",
+      "html": "<article class=\"ds-property-card\"><div class=\"ds-property-image\"><span class=\"ds-price\">3.2M EGP</span></div><div class=\"ds-property-body\"><span class=\"ds-chip\">Sale</span><h3>Apartment in Smouha</h3><p>Smouha, Alexandria</p><button class=\"ds-btn-primary\">View Details</button></div></article>",
+      "css": ".ds-property-card { width: 280px; overflow: hidden; background: #fff3e0; color: #431407; border: 1px solid #fed7aa; border-radius: 1rem; box-shadow: 0 4px 6px rgba(0,0,0,0.08); font-family: Outfit, sans-serif; transition: transform 300ms ease-out, box-shadow 300ms ease-out; } .ds-property-card:hover { transform: scale(1.02); box-shadow: 0 10px 15px rgba(0,0,0,0.12); } .ds-property-image { position: relative; height: 140px; background: linear-gradient(135deg, #fed7aa, #9a3412); } .ds-price { position: absolute; top: 0.75rem; left: 0.75rem; background: #f97316; color: #fff3e0; border-radius: 9999px; padding: 0.375rem 0.75rem; font-size: 0.875rem; font-weight: 700; box-shadow: 0 10px 15px rgba(0,0,0,0.12); } .ds-property-body { display: grid; gap: 0.5rem; padding: 1rem; } .ds-property-body h3 { margin: 0; font-size: 1.125rem; line-height: 1.25; } .ds-property-body p { margin: 0; color: #9a3412; font-size: 0.75rem; } .ds-chip { width: fit-content; background: rgba(249,115,22,0.12); color: #f97316; border-radius: 9999px; padding: 0.25rem 0.625rem; font-size: 0.75rem; font-weight: 500; } .ds-btn-primary { margin-top: 0.5rem; background: #f97316; color: #fff3e0; border: 0; border-radius: 0.5rem; padding: 0.625rem 1rem; font: 600 0.875rem/1.2 Outfit, sans-serif; cursor: pointer; }"
+    },
+    {
+      "name": "Comparison Bar",
+      "kind": "custom",
+      "refersTo": "comparison-bar",
+      "description": "A floating decision aid for comparing selected properties.",
+      "html": "<div class=\"ds-compare-bar\"><div class=\"ds-compare-icon\">⇄</div><div class=\"ds-compare-copy\"><span>Comparing</span><strong>2 / 4</strong></div><div class=\"ds-thumb\"></div><div class=\"ds-thumb\"></div><button class=\"ds-compare-btn\">Compare →</button></div>",
+      "css": ".ds-compare-bar { display: flex; align-items: center; gap: 0.75rem; width: min(560px, calc(100vw - 24px)); background: rgba(255,243,224,0.91); color: #431407; border: 1px solid #fed7aa; border-radius: 1.75rem; padding: 0.75rem 1rem; box-shadow: 0 20px 50px -10px rgba(0,0,0,0.35); backdrop-filter: blur(20px); font-family: Outfit, sans-serif; } .ds-compare-icon { width: 2.25rem; height: 2.25rem; border-radius: 0.75rem; display: grid; place-items: center; background: #f97316; color: #fff3e0; font-weight: 900; } .ds-compare-copy { display: grid; gap: 0.125rem; } .ds-compare-copy span { font-size: 0.5625rem; font-weight: 900; text-transform: uppercase; letter-spacing: 0.12em; opacity: 0.45; } .ds-compare-copy strong { font-size: 0.6875rem; line-height: 1; } .ds-thumb { width: 2.5rem; height: 2.5rem; border-radius: 0.75rem; border: 1px solid #fed7aa; background: linear-gradient(135deg, #fed7aa, #fff7ed); } .ds-compare-btn { margin-left: auto; background: linear-gradient(135deg, #f97316, rgba(234,88,12,0.8)); color: #fff; border: 0; border-radius: 0.75rem; padding: 0.625rem 1rem; font-size: 0.625rem; font-weight: 900; letter-spacing: 0.12em; text-transform: uppercase; cursor: pointer; transition: transform 200ms ease-out; } .ds-compare-btn:hover { transform: scale(1.05); }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Verified Property Console",
+    "overview": "Aqarico should feel like a calm command surface for real estate decisions: warm enough to be approachable, structured enough to handle dense property data, and fast enough to support comparison, filtering, verification, and listing management. The current system is built around a warm orange identity, rounded surfaces, compact controls, and direct action patterns.\n\nThe product must keep trust visible. Verified states, contact actions, property facts, saved items, comparison slots, and dashboard signals should be easy to identify without turning every screen into a loud sales page. The interface is allowed to have personality, but its first job is helping users decide what to do next.",
+    "keyCharacteristics": [
+      "Warm marketplace identity with product-grade structure.",
+      "Dense but scannable layouts for listings, filters, agents, and dashboards.",
+      "Orange as an action and trust signal, not page decoration.",
+      "Rounded, tactile controls with restrained shadows.",
+      "Mobile-first behavior with future Arabic/RTL readiness."
+    ],
+    "rules": [
+      {
+        "name": "The Orange Has a Job Rule",
+        "body": "Orange is for action, status, selection, or brand moments. Prohibited: filling large quiet surfaces with orange just to make the page feel designed.",
+        "section": "colors"
+      },
+      {
+        "name": "The Warmth Needs Contrast Rule",
+        "body": "Warm cream and orange can become low-contrast quickly. Text, controls, badges, and borders must preserve WCAG AA contrast and remain readable in mobile sunlight.",
+        "section": "colors"
+      },
+      {
+        "name": "The Scan First Rule",
+        "body": "Listing and dashboard typography must support fast scanning before expressive branding. Use stronger weights for facts and actions, not decorative slogans.",
+        "section": "typography"
+      },
+      {
+        "name": "The Layer With Purpose Rule",
+        "body": "Shadows exist to explain stack order or interaction state. Prohibited: heavy shadows on every card at rest.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "Do use Signal Orange for primary actions, selected states, and trust-related emphasis.",
+      "Do keep dense marketplace screens scannable with clear labels, compact metadata, and predictable control placement.",
+      "Do preserve WCAG AA contrast, especially on warm cream and orange combinations.",
+      "Do use borders and tonal layering before adding large shadows.",
+      "Do make verification, contact, comparison, and saved states visible at the exact point of decision.",
+      "Do keep future Arabic/RTL support in mind when arranging nav, forms, cards, maps, and dashboards."
+    ],
+    "donts": [
+      "Don't ship generic real estate templates, repetitive card grids, plain orange SaaS styling, cluttered broker portals, luxury-only visual language, over-decorated dashboards, vague marketing copy, or interfaces that feel slow, noisy, or unfinished.",
+      "Don't rely on oversized decorative cards, predictable hero sections, weak hierarchy, low-contrast warm palettes, or visual flourishes that do not help users make property decisions.",
+      "Don't use orange as filler across large panels. It must signal action, status, selection, or brand.",
+      "Don't use gradient text. Use solid color, scale, and weight for emphasis.",
+      "Don't create nested cards. Use full-width sections, borders, or tonal rows when hierarchy gets dense.",
+      "Don't use side-stripe borders as accents. Use badges, icons, full borders, or background tint instead."
+    ]
+  }
+}
